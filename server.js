@@ -5,10 +5,7 @@ var restify = require('restify');
 var server = restify.createServer({
   name: 'Noditor Server using Restify'
 });
-/*server.use(restify.acceptParser(server.acceptable));
-server.use(restify.queryParser());
-server.use(restify.bodyParser());
-*/
+
 
 server.get('/noditor/:passcode/:command', noditor.commands);
 
