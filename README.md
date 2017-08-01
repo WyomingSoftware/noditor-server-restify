@@ -1,10 +1,4 @@
-Noditor Server
-=========
+# Noditor Server Restify
 
-Noditor Mobile Monitor System. The Node.js server that receives statistics from the Noditor module and delivers them to a mobile device.
-
-## PLEASE DO NOT INSTALL 
-
-Noditor is not ready for use at this time.
-
-
+An example Node.js App that shows the implementation of the Noditor Node Module
+for use with Restify.
