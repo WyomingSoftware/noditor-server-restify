@@ -1,4 +1,4 @@
-var noditor = require('noditor');
+var noditor = require('../noditor');
 var restify = require('restify');
 
 // Restify
@@ -10,7 +10,7 @@ server.use(restify.acceptParser(server.acceptable));
 server.use(restify.queryParser());
 server.use(restify.bodyParser());
 
-server.get('/noditor/:server', noditor.commands);
+server.get('/noditor/:', noditor.commands);
 
 server.listen(8080, function () {
     console.log('Server > '+server.name+' started @'+new Date());
