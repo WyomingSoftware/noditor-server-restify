@@ -1,16 +1,16 @@
-var noditor = require('noditor');
+var noditor = require('../noditor');
 var restify = require('restify');
 
 // Restify
 var server = restify.createServer({
-  name: 'Noditor Server using Restify',
-  version: '1.0.0'
+  name: 'Noditor Server using Restify'
 });
-server.use(restify.acceptParser(server.acceptable));
+/*server.use(restify.acceptParser(server.acceptable));
 server.use(restify.queryParser());
 server.use(restify.bodyParser());
+*/
 
-server.get('/noditor/:', noditor.commands);
+server.get('/noditor/:passcode/:command', noditor.commands);
 
 server.listen(8080, function () {
     console.log('Server > '+server.name+' started @'+new Date());
