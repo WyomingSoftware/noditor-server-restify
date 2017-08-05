@@ -7,7 +7,7 @@ var server = restify.createServer({
 });
 
 // Add the endpoint needed by the Noditor Mobile App
-server.get('/noditor/:passcode/:command', noditor.commands);
+server.get('/noditor/:path/:passcode/:command', noditor.commands);
 
 // Start Restify
 server.listen(8080, function () {
