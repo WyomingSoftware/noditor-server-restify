@@ -16,3 +16,14 @@ server.listen(8080, function () {
     var options = {"quiet":false};
     noditor.start(options);
 });
+
+// Place a load on the server
+setInterval(function(){ loadMemory(Math.floor((Math.random() * 500000) + 20000)); }, 5000);
+var arr;
+var txt = 'This is meant to be a long string to place a load on the server memory footprint.';
+function loadMemory(size) {
+  arr = [];
+  for (var i = 0; i<size; i++){
+    arr.push(txt);
+  }
+}
