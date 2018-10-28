@@ -1,3 +1,5 @@
+# This repo is now deprecated. No further development is planned. The apps have been removed from the app stores.
+---
 # Noditor Server Restify
 
 An example Node.js App that shows the implementation of the Noditor Node Module
